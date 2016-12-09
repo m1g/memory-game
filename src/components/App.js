@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import BoxItem from './BoxItem'
+import characters from '../characters.json'
+import styles from './App.scss'
 
 class App extends Component {
 
@@ -10,10 +13,10 @@ class App extends Component {
       <table>
         <tbody>
           <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
+            <BoxItem image={characters[0]} />
+            <BoxItem image={characters[1]} />
+            <BoxItem image={characters[0]} />
+            <BoxItem image={characters[1]} />
           </tr>
           <tr>
             <td>5</td>
