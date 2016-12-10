@@ -1,10 +1,11 @@
 td.root {
   width: 115px;
   height: 150px;
-  border: 1px solid blue;
-  background-color: hsla(234, 100%, 26%, 1);
+  border: none;
+  background-image: url('http://i.imgur.com/sXoGsAd.png');
+  background-repeat: none;
+  background-size: cover;
   border-radius: 5px;
-  padding: 5px;
   text-align: center;
   color: white;
 
@@ -14,14 +15,14 @@ td.root {
   }
 
   &.down {
-      img {
-      // display: none;
-      }
-
-    &.up {
-      img {
-
+    img {
+      display: none;
     }
   }
+
+  &.up {
+    img {
+      // background-color or something
+    }
   }
 }
