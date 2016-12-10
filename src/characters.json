@@ -32,18 +32,6 @@
     "image": "http://i.imgur.com/RWMcDRx.png"
   },
   {
-    "name": "Moana",
-    "image": "http://i.imgur.com/QvGHAhn.png"
-  },
-  {
-    "name": "Maui",
-    "image": "http://i.imgur.com/aEwgPbh.png"
-  },
-  {
-    "name": "Heihei",
-    "image": "http://i.imgur.com/twWKltz.png"
-  },
-  {
     "name": "Pua",
     "image": "http://i.imgur.com/SxLWjsq.png"
   },
@@ -52,15 +40,27 @@
     "image": "http://i.imgur.com/99ePXFo.png"
   },
   {
-    "name": "Gramma Tala",
-    "image": "http://i.imgur.com/c2du15f.png"
+    "name": "Maui 2",
+    "image": "http://i.imgur.com/RWMcDRx.png"
+  },
+  {
+    "name": "Moana",
+    "image": "http://i.imgur.com/QvGHAhn.png"
+  },
+  {
+    "name": "Maui",
+    "image": "http://i.imgur.com/aEwgPbh.png"
   },
   {
     "name": "Moana 2",
     "image": "http://i.imgur.com/fTAZG6D.png"
   },
   {
-    "name": "Maui 2",
-    "image": "http://i.imgur.com/RWMcDRx.png"
+    "name": "Gramma Tala",
+    "image": "http://i.imgur.com/c2du15f.png"
+  },
+  {
+    "name": "Heihei",
+    "image": "http://i.imgur.com/twWKltz.png"
   }
 ]

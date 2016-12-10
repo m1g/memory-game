@@ -2,21 +2,38 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 12%;
+  flex-direction: column;
 
   h1 {
     text-align: center;
-    background-image: url('http://4hatsandfrugal.com/wp-content/uploads/2015/08/MOANA_LOGO-1024x320.jpg');
+    background-image: url('http://i.imgur.com/xr3zH6c.jpg');
     background-repeat: no-repeat;
+    background-position: center;
     background-size: contain;
     width: 500px;
     height: 125px;
     margin: 0;
   }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    h2 {
+      font-family: 'Lilita One', cursive;
+      padding: 10px;
+      color: #80cac3;
+      // background-color: #80cac3; !Want to show when game won
+      margin: 10px;
+      border-radius: 5px;
+    }
+  }
 }
 
 table {
   display: flex;
-  margin-top: 80px;
+  margin-top: 10px;
   border-spacing: 10px;
 }

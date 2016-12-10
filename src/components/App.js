@@ -72,7 +72,11 @@ class App extends Component {
     const matched = this.state.matched
     return <div>
       <header>
-        <h1>{this.state.won ? 'YOU WIN' : ' '}</h1>
+        <h1 />
+        <div>
+          <h2>{this.state.won ? 'YOU WIN!' : ' '}</h2>
+          <h2>{this.state.won ? 'Reset' : ' '}</h2>
+        </div>
       </header>
       <section>
         <table>
