@@ -62,6 +62,9 @@ class App extends Component {
     }, 3000)
   }
 
+  gameReset () {
+    this.state.check
+  }
   // For each card in faces:
   // If picks inclues card:
   //   Show card face.
@@ -74,8 +77,8 @@ class App extends Component {
       <header>
         <h1 />
         <div>
-          <h2>{this.state.won ? 'YOU WIN!' : ' '}</h2>
-          <h2>{this.state.won ? 'Reset' : ' '}</h2>
+          <h2 style={{ display: this.state.won ? 'block' : 'none' }}>You win!</h2>
+          <h2 className={this.gameReset} style={{ display: this.state.won ? 'block' : 'none' }}>Reset</h2>
         </div>
       </header>
       <section>
