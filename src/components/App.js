@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
+import shuffle from 'array-shuffle'
 import BoxItem from './BoxItem'
 import styles from './App.scss'
 
-import images from '../characters.json'
+import imagesData from '../characters.json'
 
 class App extends Component {
 
@@ -11,7 +12,8 @@ class App extends Component {
     this.state = {
       matched: [],
       picks: [],
-      won: false
+      won: false,
+      images: shuffle(imagesData)
     }
   }
 
@@ -42,14 +44,14 @@ class App extends Component {
   //   Reset picks to [] after a short delay.
   check () {
     const picks = this.state.picks
-    if (images[picks[0]].name === images[picks[1]].name) {
+    if (this.state.images[picks[0]].name === this.state.images[picks[1]].name) {
       this.setState({
         matched: [...this.state.matched, ...picks],
         picks: []
       }, () => {
         // Call back function that happens after
         // React is done updating the state.
-        if (this.state.matched.length === images.length) {
+        if (this.state.matched.length === this.state.images.length) {
           // Show modal
           this.setState({
             won: true
@@ -73,6 +75,7 @@ class App extends Component {
   render () {
     const picks = this.state.picks
     const matched = this.state.matched
+    const images = this.state.images
     return <div>
       <header>
         <h1 />
