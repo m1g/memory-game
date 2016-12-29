@@ -28,6 +28,11 @@ header {
       background-color: #80cac3;
       margin: 10px;
       border-radius: 5px;
+
+      &:hover {
+        background-color: #50b9d4;
+        cursor: pointer;
+      }
     }
   }
 }

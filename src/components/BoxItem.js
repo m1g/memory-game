@@ -3,6 +3,12 @@ import styles from './BoxItem.scss'
 
 class BoxItem extends Component {
 
+  // static propTypes = {
+  //   isUp: React.PropTypes.boolean.isRequired,
+  //   handleClick: React.PropTypes.function.isRequired,
+  //   card: React.PropTypes.object.isRequired
+  // }
+
   render () {
     const upClass = this.props.isUp ? styles.up : styles.down
     return <td

@@ -52,7 +52,7 @@ class App extends Component {
         // Call back function that happens after
         // React is done updating the state.
         if (this.state.matched.length === this.state.images.length) {
-          // Show modal
+          // Show reset state
           this.setState({
             won: true
           })
@@ -64,14 +64,15 @@ class App extends Component {
     }, 3000)
   }
 
-  gameReset () {
-    this.state.check
-  }
-  // For each card in faces:
-  // If picks inclues card:
-  //   Show card face.
-  // Else:
-  //   Show card back.
+  // gameReset () {
+  //   this.state = {
+  //     matched: [],
+  //     picks: [],
+  //     won: false,
+  //     images: shuffle(imagesData)
+  //   }
+  // }
+
   render () {
     const picks = this.state.picks
     const matched = this.state.matched
@@ -81,7 +82,7 @@ class App extends Component {
         <h1 />
         <div>
           <h2 style={{ display: this.state.won ? 'block' : 'none' }}>You win!</h2>
-          <h2 className={this.gameReset} style={{ display: this.state.won ? 'block' : 'none' }}>Reset</h2>
+          <h2 onClick={() => this.reset} style={{ display: this.state.won ? 'block' : 'none' }}>Reset</h2>
         </div>
       </header>
       <section>
@@ -112,25 +113,6 @@ class App extends Component {
               <BoxItem card={images[15]} isUp={picks.includes(15) || matched.includes(15)} handleClick={() => this.choose(15)} />
             </tr>
           </tbody>
-
-          {/* <tr>
-            <td className='down'><img src='http://img03.deviantart.net/002f/i/2012/147/9/7/vanilla_belle__s_cutie_mark_by_exkira-d519625.png' alt='purple Seashell' width='200px' /></td>
-            <td className='down'><img src='http://img03.deviantart.net/002f/i/2012/147/9/7/vanilla_belle__s_cutie_mark_by_exkira-d519625.png' alt='purple Seashell' width='200px' /></td>
-            <td className='up'><img src='' alt='purple Seashell' width='200px' /></td>
-            <td className='up'><img src='http://img03.deviantart.net/002f/i/2012/147/9/7/vanilla_belle__s_cutie_mark_by_exkira-d519625.png' alt='purple Seashell' width='200px' /></td>
-          </tr>
-          <tr>
-            <td className='down'><img src='' alt='pink starfish' width='200px' /></td>
-            <td className='down'><img src='https://s-media-cache-ak0.pinimg.com/originals/c9/56/73/c95673bb9e116447f43ff57e95a0a468.png' alt='pink starfish' width='200px' /></td>
-            <td className='up'><img src='https://s-media-cache-ak0.pinimg.com/originals/c9/56/73/c95673bb9e116447f43ff57e95a0a468.png' alt='pink starfish' width='200px' /></td>
-            <td className='up'><img src='https://s-media-cache-ak0.pinimg.com/originals/c9/56/73/c95673bb9e116447f43ff57e95a0a468.png' alt='pink starfish' width='200px' /></td>
-          </tr>
-          <tr>
-            <td className='down'><img src='' alt='coral starfish' width='200px' /></td>
-            <td className='down'><img src='http://www.clker.com/cliparts/q/e/k/7/q/C/coral-starfish-hi.png' alt='coral starfish' width='200px' /></td>
-            <td className='up'><img src='http://www.clker.com/cliparts/q/e/k/7/q/C/coral-starfish-hi.png' alt='coral starfish' width='200px' /></td>
-            <td className='up'><img src='http://www.clker.com/cliparts/q/e/k/7/q/C/coral-starfish-hi.png' alt='coral starfish' width='200px' /></td>
-          </tr> */}
         </table>
       </section>
     </div>
