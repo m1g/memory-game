@@ -64,14 +64,14 @@ class App extends Component {
     }, 3000)
   }
 
-  // gameReset () {
-  //   this.state = {
-  //     matched: [],
-  //     picks: [],
-  //     won: false,
-  //     images: shuffle(imagesData)
-  //   }
-  // }
+  gameReset () {
+    this.setState({
+      matched: [],
+      picks: [],
+      won: false,
+      images: shuffle(imagesData)
+    })
+  }
 
   render () {
     const picks = this.state.picks
@@ -82,7 +82,7 @@ class App extends Component {
         <h1 />
         <div>
           <h2 style={{ display: this.state.won ? 'block' : 'none' }}>You win!</h2>
-          <h2 onClick={() => this.reset} style={{ display: this.state.won ? 'block' : 'none' }}>Reset</h2>
+          <h2 onClick={() => this.gameReset()} style={{ display: this.state.won ? 'block' : 'none' }}>Reset</h2>
         </div>
       </header>
       <section>
